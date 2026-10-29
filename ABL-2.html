@@ -387,24 +387,6 @@ footer {
 
 <div id="cart-message"></div>
 
-<script>
-let cart = [];
-let total = 0;
-
-function addToCart(name, price) {
-    cart.push({name: name, price: price});
-    total += price;
-
-    const message = document.getElementById("cart-message");
-    message.innerHTML =
-        "✅ Added " + name +
-        "<br>Items in cart: " + cart.length +
-        "<br>Total: ₹" + total;
-
-    message.style.display = "block";
-}
-
-</script>
 
 </body>
 </html>
