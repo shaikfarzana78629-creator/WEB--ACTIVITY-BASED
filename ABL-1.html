@@ -383,44 +383,6 @@
         <p>© 2026 ShopEasy | All Rights Reserved</p>
     </footer>
 
-    <script>
-        let cartCount = 0;
-        let cartTotal = 0;
-
-        function addToCart(name, price) {
-            cartCount++;
-            cartTotal += price;
-
-            document.getElementById("cart-count").textContent = cartCount;
-            document.getElementById("cart-message").textContent =
-                "Items: " + cartCount +
-                " | Total: ₹" + cartTotal.toLocaleString("en-IN");
-
-            alert(name + " added to your cart!");
-        }
-
-        function filterProducts(category) {
-            const products = document.querySelectorAll(".product");
-
-            products.forEach(function(product) {
-                if (category === "All" ||
-                    product.dataset.category === category) {
-                    product.style.display = "block";
-                } else {
-                    product.style.display = "none";
-                }
-            });
-        }
-
-        document.getElementById("search").addEventListener("input", function() {
-            const query = this.value.toLowerCase();
-
-            document.querySelectorAll(".product").forEach(function(product) {
-                const matches = product.textContent.toLowerCase().includes(query);
-                product.style.display = matches ? "block" : "none";
-            });
-        });
-    </script>
-
+    
 </body>
 </html>
